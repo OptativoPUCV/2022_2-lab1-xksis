@@ -12,21 +12,20 @@ y en c almacena el valor de la suma de a más b.
 */
 
 void suma(int a, int b, int * c) {
-    
+  *c=a+b;
 }
 
 /*
 Esta función suma los N primeros números del arreglo a
 */
 int sumaN(int a[], int N) {
-    int i;
-    int tot = 0;
+  int i;
+  int tot = 0;
+  for(i = 0; i < N; i++) {
+    tot += a[i];
+  }
 
-    for(i = 0; i < N; i++) {
-      tot += a[i];
-    }
-
-    return tot;
+  return tot;
 }
 
 /*
@@ -37,7 +36,8 @@ Utilice la función sumaN.
 */
 
 void sumaNultimos(int a[], int n, int m, int * suma) {
-
+  int ultimos=n-m;
+  *suma=sumaN(a+ultimos,m);
 }
 
 /*
@@ -55,7 +55,12 @@ typedef struct {
 
 
 Persona* crearPersona(char nombre[], char rut[], int edad) {
-   return NULL;
+  Persona* p=(Persona*)malloc(sizeof(Persona*));
+  strcpy(p->nombre,nombre);
+  strcpy(p->rut,rut);
+  p->edad=edad;
+  
+  return p;
 }
 
 /*
@@ -67,12 +72,12 @@ correspondiente para el arreglo con `n` datos
 inicializados en 0 y luego retorna el vector creado.
 */
 typedef struct {
-   int * datos; // arreglo dinámico
-   int capacidad; // capacidad del arreglo
+  int * datos; // arreglo dinámico
+  int capacidad; // capacidad del arreglo
 } Vector;
 
 Vector * crearVector(int n) {
-   return NULL;
+  return NULL;
 }
 
 /*
@@ -81,7 +86,7 @@ Programe la función void asignarValor(Vector * v, int i, int valor),
 la cual asigna el valor a la posición i del vector v.
 */
 void asignarValor(Vector * v, int i, int valor) {
-
+  
 }
 
 /*
@@ -90,7 +95,7 @@ Programe la función int obtenerValor(Vector * v, int i),
 la cual retorna el valor en la posición i del vector v.
 */
 int obtenerValor(Vector * v, int i) {
-   return 0;
+  return 0;
 }
 
 /*
