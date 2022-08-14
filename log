@@ -76,3 +76,9 @@ In function ‘strcpy’,
 cc1: all warnings being treated as errors
 Compilation failed
 a94a8ba
+Sun 14 Aug 2022 06:13:12 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  3|4
+total_score: 30/70
+41bbd9d
