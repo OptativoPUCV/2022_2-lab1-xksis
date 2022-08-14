@@ -57,3 +57,22 @@ In function ‘strcpy’,
 cc1: all warnings being treated as errors
 Compilation failed
 905e768
+Sun 14 Aug 2022 06:10:06 PM UTC: 
+In file included from test.c:5:
+exercises.c: In function ‘crearPersona’:
+exercises.c:61:4: error: array subscript ‘Persona[0]’ is partly outside array bounds of ‘unsigned char[8]’ [-Werror=array-bounds]
+   61 |   p->edad=edad;
+      |    ^~
+exercises.c:58:24: note: referencing an object of size 8 allocated by ‘malloc’
+   58 |   Persona* p=(Persona*)malloc(sizeof(Persona*));
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /nix/store/dwsi3wsqpqm0hpzdm9fsxc7q732p9xwi-glibc-2.34-210-dev/include/string.h:519,
+                 from test.c:3:
+In function ‘strcpy’,
+    inlined from ‘crearPersona’ at exercises.c:60:3:
+/nix/store/dwsi3wsqpqm0hpzdm9fsxc7q732p9xwi-glibc-2.34-210-dev/include/bits/string_fortified.h:79:10: error: ‘__builtin___strcpy_chk’ offset 30 is out of the bounds [0, 8] [-Werror=array-bounds]
+   79 |   return __builtin___strcpy_chk (__dest, __src, __glibc_objsize (__dest));
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+a94a8ba
