@@ -88,3 +88,22 @@ Sun 14 Aug 2022 06:19:58 PM UTC:
  tests:  4|3
 total_score: 40/70
 bdbc503
+Sun 14 Aug 2022 06:22:31 PM UTC: 
+ exercises.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘asignarValor’:
+exercises.c:94:7: error: ‘i’ redeclared as different kind of symbol
+   94 |   int i;
+      |       ^
+exercises.c:93:35: note: previous definition of ‘i’ with type ‘int’
+   93 | void asignarValor(Vector * v, int i, int valor) {
+      |                               ~~~~^
+exercises.c:95:13: error: expected expression before ‘)’ token
+   95 |   for(i=0;i<)
+      |             ^
+exercises.c:96:1: error: expected expression before ‘}’ token
+   96 | }
+      | ^
+Compilation failed
+204c501
